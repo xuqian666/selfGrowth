@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Layout } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
+// import LineMarkerEcharts from './PieScrollableLegend/index'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Layout>
+        <Header>header</Header>
+        <Layout>
+          <Sider>left sidebar</Sider>
+          <Content>main content</Content>
+          <Sider>right sidebar</Sider>
+        </Layout>
+        <Footer>footer</Footer>
+      </Layout>
+      {/* <header className="App-header">
+        <LineMarkerEcharts />
       </header>
+      <Button type="primary">Button</Button> */}
     </div>
   );
 }
